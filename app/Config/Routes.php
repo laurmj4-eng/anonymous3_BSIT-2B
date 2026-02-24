@@ -77,5 +77,14 @@ $routes->post('students/update', 'Student::update');
 $routes->delete('students/delete/(:num)', 'Student::delete/$1');
 $routes->post('students/fetchRecords', 'Student::fetchRecords');
 
+
+// Grading routes
+$routes->get('/grades', 'Grade::index');
+$routes->post('grades/save', 'Grade::save');
+$routes->get('grades/edit/(:segment)', 'Grade::edit/$1');
+$routes->post('grades/update', 'Grade::update');
+$routes->delete('grades/delete/(:num)', 'Grade::delete/$1');
+$routes->post('grades/fetchRecords', 'Grade::fetchRecords');
+
 // Logs routes for admin
 $routes->get('/log', 'Logs::log');
